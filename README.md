@@ -14,6 +14,10 @@ donde:
 
 - **Intensidad de corriente:** Cantidad de corriente que pasa por un punto en una unidad de tiempo (se mide en amperios)
 
+## Requerimientos
+
+versión de Ruby usada: 3.3.5
+
 ## Aplicación
 
 El proyecto está estructurado de la siguiente manera
