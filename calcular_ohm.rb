@@ -1,11 +1,7 @@
 class CalcularOhm
 
-  def initialize
-    @intensidad = nil
-    @resistencia = nil
-    @voltaje = nil
-  end
-
+  attr_accessor :intensidad, :resistencia, :voltaje
+  
   def calcular_intensidad
     @intensidad = @voltaje / @resistencia
   end
