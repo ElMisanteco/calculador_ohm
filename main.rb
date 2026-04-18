@@ -39,7 +39,57 @@ when 1 # Intensidad
   puts "I = #{valor_de_i} amperios"
 
 when 2 # Resistencia
+  puts ""
+  puts  "R = V / I"
+
+  puts ""
+  solicitar_v = "¿Cual es el valor del voltaje(V)?"
+  valor_v = recibir_dato(solicitar_v)
+
+  puts ""
+  solicitar_i = "¿Cual es el valor de la intensidad(I)"
+  valor_i = recibir_dato(solicitar_i)
+  valor_i = validar_div_cero(valor_i, solicitar_i)
+
+  calcular_r = CalcularOhm.new
+  calcular_r.voltaje = valor_v
+  calcular_r.intensidad = valor_i
+
+  valor_de_r = calcular_r.calcular_resistencia
+  
+  puts""
+  puts "R = #{valor_v} / #{valor_i}"
+  puts ""
+  puts "El valor que corresponde a R es: #{valor_de_r} ohmios."
+  puts ""
+  puts "V = #{valor_v} voltios"
+  puts "R = #{valor_de_r} ohmios"
+  puts "I = #{valor_i} amperios"
 
 when 3 # Voltaje
+  puts ""
+  puts "V = I x R"
 
+  puts ""
+  solicitar_i = "¿Cual es el valor de la intensidad(I)"
+  valor_i = recibir_dato(solicitar_i)
+
+  puts ""
+  solicitar_r = "¿Cual es el valor de la resistencia(R)?"
+  valor_r = recibir_dato(solicitar_r)
+  
+  calcular_v = CalcularOhm.new
+  calcular_v.intensidad = valor_i
+  calcular_v.resistencia = valor_r
+
+  valor_de_v = calcular_v.calcular_voltaje
+
+  puts ""
+  puts "V = #{valor_i} x #{valor_r}"
+  puts ""
+  puts "El valor que corresponde a V es: #{valor_de_v} voltios."
+  puts ""
+  puts "V = #{valor_de_v} voltios"
+  puts "R = #{valor_r} ohmios"
+  puts "I = #{valor_i} amperios"
 end

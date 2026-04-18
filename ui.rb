@@ -50,7 +50,7 @@ def recibir_dato(mensaje)
   end
 end
 
-
+# Función para evitar la división por cero
 def validar_div_cero (valor, mensaje)
   while valor == 0
     puts "-> [!] Este valor no puede ser cero, ya que la división por cero es una indeterminación."
