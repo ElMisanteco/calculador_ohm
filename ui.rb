@@ -1,6 +1,6 @@
 # Método para validar el valor ingresado
 def es_valido?(entrada)
-  !!(entrada =~ /\A\d+(\.\d+)?\z/)
+   !!(entrada =~ /\A-?(\d+(\.\d+)?|\.\d+)\z/)
 end
 
 #Método que contiene el menú
@@ -39,10 +39,14 @@ def recibir_dato(mensaje)
     valor = gets.chomp
 
     if es_valido?(valor)
-      break valor.to_f
-    elsif valor.to_f < 0
-      puts ""
-      puts "-> [!] El valor ingresado es negativo, verifique la medición."
+      #break valor.to_f
+      valor = valor.to_f
+      if valor < 0
+        puts ""
+        puts "-> [!] El valor ingresado es negativo, verifique la medición o el dato proporcionado."
+      else
+        break valor
+      end
     else
       puts ""
       puts "-> [!] El valor debe ser numérico."
