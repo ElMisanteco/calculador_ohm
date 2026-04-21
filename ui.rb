@@ -16,7 +16,6 @@ def menu
   puts "4 -> Salir"
 	puts ""
 	puts "Escriba la opción y presione enter:" 
-  puts ""
 	
   eleccion = gets.chomp.to_i
 

@@ -31,14 +31,16 @@ until incognita == 4
     
       valor_de_i = calcular_i.calcular_intensidad
       
-      puts""
+      puts ""
+      puts "~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~"
+      puts ""
       puts "I = #{valor_v} / #{valor_r}"
       puts ""
-      puts "El valor que corresponde a I es: #{valor_de_i} amperios."
+      puts "El valor que corresponde a I es: #{valor_de_i.round(2)} amperios."
       puts ""
       puts "V = #{valor_v} voltios"
       puts "R = #{valor_r} ohmios"
-      puts "I = #{valor_de_i} amperios"
+      puts "I = #{valor_de_i.round(2)} amperios"
     
     when 2 # Resistencia
       puts ""
@@ -49,7 +51,7 @@ until incognita == 4
       valor_v = recibir_dato(solicitar_v)
     
       puts ""
-      solicitar_i = "¿Cual es el valor de la intensidad(I)"
+      solicitar_i = "¿Cual es el valor de la intensidad(I)?"
       valor_i = recibir_dato(solicitar_i)
       valor_i = validar_div_cero(valor_i, solicitar_i)
     
@@ -59,13 +61,15 @@ until incognita == 4
     
       valor_de_r = calcular_r.calcular_resistencia
       
-      puts""
+      puts ""
+      puts "~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~"
+      puts ""
       puts "R = #{valor_v} / #{valor_i}"
       puts ""
-      puts "El valor que corresponde a R es: #{valor_de_r} ohmios."
+      puts "El valor que corresponde a R es: #{valor_de_r.round(2)} ohmios."
       puts ""
       puts "V = #{valor_v} voltios"
-      puts "R = #{valor_de_r} ohmios"
+      puts "R = #{valor_de_r.round(2)} ohmios"
       puts "I = #{valor_i} amperios"
     
     when 3 # Voltaje
@@ -73,7 +77,7 @@ until incognita == 4
       puts "V = I x R"
     
       puts ""
-      solicitar_i = "¿Cual es el valor de la intensidad(I)"
+      solicitar_i = "¿Cual es el valor de la intensidad(I)?"
       valor_i = recibir_dato(solicitar_i)
     
       puts ""
@@ -87,11 +91,13 @@ until incognita == 4
       valor_de_v = calcular_v.calcular_voltaje
     
       puts ""
+      puts "~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~"
+      puts ""
       puts "V = #{valor_i} x #{valor_r}"
       puts ""
-      puts "El valor que corresponde a V es: #{valor_de_v} voltios."
+      puts "El valor que corresponde a V es: #{valor_de_v.round(2)} voltios."
       puts ""
-      puts "V = #{valor_de_v} voltios"
+      puts "V = #{valor_de_v.round(2)} voltios"
       puts "R = #{valor_r} ohmios"
       puts "I = #{valor_i} amperios"
     end
